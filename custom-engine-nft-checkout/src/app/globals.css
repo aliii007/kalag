@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #161519;
+  color: white;
+  overflow-x: hidden;
+}
+
+.p-12 {
+  padding: 1rem;
+}
+
+.App {
+  text-align: center;
+  background-color: #1a4591;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #1a4591;
+  color: white;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.card-pack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.image-column {
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 150px;
+  height: 250px;
+}
+
+.details-column {
+  text-align: left;
+  flex-grow: 1;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  margin: 0 0 20px 0;
+}
+
+.purchase-options {
+  width: 50%;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  margin-top: 20px;
+}
+
+.quantity-selector {
+  display: flex;
+  color: #161519;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quantity-selector label {
+  margin-right: 10px;
+  color: #ffffff;
+  
+}
+
+.quantity-selector input {
+  background-color: #ffffff;
+  width: 50px;
+}
+
+.pay-button,
+.crypto-button {
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+  background-color: #EDC438;
+  border-radius: 0.2cm;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.crypto-button {
+  background-color: #4caf50;
+}
+
+.pay-button:hover,
+.crypto-button:hover {
+  opacity: 0.9;
+}
+
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  gap: 100px;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .card-pack {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pay-button,
+  .crypto-button {
+    width: 80%;
+  }
+
+  .quantity-selector {
+    justify-content: center;
+  }
+}
